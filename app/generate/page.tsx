@@ -302,7 +302,7 @@ export default function GenerateContent() {
                 appearance={{
                   elements: {
                     avatarBox: "w-10 h-10",
-                    userButtonPopoverCard: "bottom-full mb-2",
+                    userButtonPopoverCard: "top-full mb-2",
                   },
                 }}
               />
