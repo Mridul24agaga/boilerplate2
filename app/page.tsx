@@ -90,7 +90,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <Link href="/get-started" className="group">
+          <Link href="/sign-in" className="group">
             <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-full text-xl font-bold shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 flex items-center">
               <Zap className="w-6 h-6 mr-2 group-hover:animate-pulse" />
               Get Started Now

@@ -1,5 +1,6 @@
-"use client";
-import Link from "next/link";
+'use client'
+
+import Link from "next/link"
 import {
   SignInButton,
   SignUpButton,
@@ -7,27 +8,27 @@ import {
   SignedOut,
   SignedIn,
   useAuth,
-} from "@clerk/nextjs";
-import { useState, useEffect } from "react";
-import { Menu, X, Zap } from "lucide-react";
+} from "@clerk/nextjs"
+import { useState, useEffect } from "react"
+import { Menu, X, Zap } from "lucide-react"
 
 export function Navbar() {
-  const { userId } = useAuth();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const { userId } = useAuth()
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+      setIsScrolled(window.scrollY > 10)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-gray-900/80 backdrop-blur-md" : "bg-transparent"
+        isScrolled ? "bg-black/80 backdrop-blur-md" : "bg-black"
       }`}
     >
       <nav className="container mx-auto px-4 sm:px-8 py-4 sm:py-6">
@@ -36,7 +37,7 @@ export function Navbar() {
             <Link href="/" className="flex items-center space-x-2">
               <Zap className="w-8 h-8 text-blue-500" />
               <span className="text-xl sm:text-2xl font-bold text-white">
-                Your Ai name
+                Your AI name
               </span>
             </Link>
           </div>
@@ -101,5 +102,5 @@ export function Navbar() {
         </div>
       </nav>
     </header>
-  );
+  )
 }
